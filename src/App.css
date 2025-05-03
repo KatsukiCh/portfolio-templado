@@ -1,4 +1,4 @@
-/* Reset default styles */
+
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +14,7 @@ html, body {
   overflow-x: hidden;
 }
 
-/* Navbar Styles */
+
 .navbar {
   position: fixed;
   top: 0;
@@ -59,7 +59,7 @@ html, body {
   color: #007bff;
 }
 
-/* Hero Styles */
+
 .hero {
   position: relative;
   height: 100vh;
@@ -84,7 +84,7 @@ html, body {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
 }
 
-/* Hero Content Styles */
+
 .hero-content {
   position: relative;
   z-index: 10;
@@ -98,14 +98,14 @@ html, body {
   animation: fadeIn 1.5s ease-in-out;
 }
 
-/* Profile Picture Container */
+
 .profile-picture-container {
   flex: 0 0 auto;
   margin-right: 2rem;
   position: relative;
 }
 
-/* Profile Picture Styles */
+
 .profile-picture {
   width: 200px;
   height: 200px;
@@ -122,7 +122,7 @@ html, body {
   transform: scale(1.05);
 }
 
-/* Tooltip Styles (Profile Picture) */
+
 .tooltip {
   position: absolute;
   bottom: -2.5rem;
@@ -143,13 +143,13 @@ html, body {
   opacity: 1;
 }
 
-/* Text Content Styles */
+
 .text-content {
   flex: 1;
   text-align: left;
 }
 
-/* Highlight Effect for Heading */
+
 .highlight {
   position: relative;
   font-size: 3rem;
@@ -183,7 +183,7 @@ html, body {
   max-width: 500px;
 }
 
-/* Social Media Links */
+
 .social-links {
   margin-top: 1.5rem;
   display: flex;
@@ -191,13 +191,13 @@ html, body {
   justify-content: flex-start;
 }
 
-/* Social Icon Container */
+
 .social-icon-container {
-  position: relative; /* For positioning the tooltip */
+  position: relative; 
   display: inline-block;
 }
 
-/* Social Icon Styles */
+
 .social-icon-container a {
   display: inline-block;
   transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
@@ -215,13 +215,13 @@ html, body {
   object-fit: contain;
 }
 
-/* Social Tooltip Styles */
+
 .social-tooltip {
   position: absolute;
-  top: -2.5rem; /* Position above the icon */
+  top: -2.5rem; 
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.8); /* Dark background for contrast */
+  background: rgba(0, 0, 0, 0.8); 
   color: #ffffff;
   font-size: 0.875rem;
   padding: 0.5rem 1rem;
@@ -233,10 +233,9 @@ html, body {
 }
 
 .social-icon-container:hover .social-tooltip {
-  opacity: 1; /* Show on hover */
+  opacity: 1;
 }
 
-/* Fade-In Animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -248,7 +247,6 @@ html, body {
   }
 }
 
-/* Projects Section Styles */
 .projects-section {
   padding: 5rem 1rem;
   background: #f8f9fa;

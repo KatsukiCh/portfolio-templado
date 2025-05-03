@@ -12,7 +12,7 @@ const Hero = () => {
       <div className="hero-content">
         <div className="profile-picture-container">
           <img src={profileImage} alt="Profile" className="profile-picture" />
-          <div className="tooltip">This is me!</div>
+          <div className="tooltip">This goofy looking goober needs commissions</div>
         </div>
         <div className="text-content">
           <h1>My name is Rafael Templado!</h1>

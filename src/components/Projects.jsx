@@ -24,23 +24,23 @@ const Projects = () => {
     { src: art10, alt: 'What if we were actually teachers?' },
   ];
 
-  // State to manage modal visibility and selected image
+ 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
 
-  // Open the modal with the selected image
+
   const openModal = (image) => {
     setSelectedImage(image);
     setIsModalOpen(true);
   };
 
-  // Close the modal
+
   const closeModal = () => {
     setSelectedImage(null);
     setIsModalOpen(false);
   };
 
-  // Handle clicking outside the image to close the modal
+
   const handleOverlayClick = (e) => {
     if (e.target.classList.contains('modal-overlay')) {
       closeModal();
@@ -55,7 +55,7 @@ const Projects = () => {
           <div
             key={index}
             className="gallery-item"
-            onClick={() => openModal(image)} // Open modal on click
+            onClick={() => openModal(image)}
           >
             <img src={image.src} alt={image.alt} className="gallery-image" />
             <div className="overlay">
@@ -65,7 +65,6 @@ const Projects = () => {
         ))}
       </div>
 
-      {/* Modal for enlarged image */}
       {isModalOpen && (
         <div className="modal-overlay" onClick={handleOverlayClick}>
           <div className="modal-content">
