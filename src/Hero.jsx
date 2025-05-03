@@ -1,14 +1,34 @@
 import React from 'react';
-import creatorImage from './assets/image.PNG';
+import backgroundImage from '../assets/portfoliobg_1.png'; // Updated background
+import profileImage from '../assets/image.PNG'; // Profile picture
+import githubIcon from '../assets/github.png'; // GitHub icon
+import wattpadIcon from '../assets/wattpad.png'; // Wattpad icon
+import youtubeIcon from '../assets/youtube.png'; // YouTube icon
 
-const Hero = ({ name, description }) => {
+const Hero = () => {
   return (
-    <section className="hero">
+    <section className="hero" style={{ backgroundImage: `url(${backgroundImage})` }}>
+      <div className="hero-overlay"></div>
       <div className="hero-content">
-        <img src={creatorImage} alt={name} className="creator-image" />
-        <div className="creator-info">
-          <h1>{name}</h1>
-          <p>{description}</p>
+        {/* Profile Picture */}
+        <img src={profileImage} alt="Profile" className="profile-picture" />
+        <h1 className="highlight">Hi, I’m [Your Name]</h1>
+        <h2>Full-Stack Developer & Designer</h2>
+        <p>
+          I’m passionate about building beautiful, functional web applications that solve real-world problems. With expertise in React, Node.js, and UI/UX design, I bring ideas to life.
+        </p>
+        <a href="#contact" className="cta-button">Get in Touch</a>
+        {/* Social Media Icons */}
+        <div className="social-links">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <img src={githubIcon} alt="GitHub" className="social-icon" />
+          </a>
+          <a href="https://wattpad.com" target="_blank" rel="noopener noreferrer">
+            <img src={wattpadIcon} alt="Wattpad" className="social-icon" />
+          </a>
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+            <img src={youtubeIcon} alt="YouTube" className="social-icon" />
+          </a>
         </div>
       </div>
     </section>
