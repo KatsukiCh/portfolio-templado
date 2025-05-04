@@ -79,7 +79,7 @@ const Projects = () => {
         >
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <button className="modal-nav-button modal-nav-left" onClick={handlePrevImage}>
-              ←
+            ◁
             </button>
             <img
               key={selectedImageIndex} 
@@ -88,7 +88,7 @@ const Projects = () => {
               className={`modal-image ${isModalVisible ? 'fade-in' : ''}`}
             />
             <button className="modal-nav-button modal-nav-right" onClick={handleNextImage}>
-              →
+            ▷
             </button>
           </div>
         </div>
