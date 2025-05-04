@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import art1 from '../assets/art1.png';
 import art2 from '../assets/art2.png';
 import art3 from '../assets/art3.png';
@@ -11,68 +11,85 @@ import art9 from '../assets/art9.png';
 import art10 from '../assets/art10.png';
 
 const Projects = () => {
-  const galleryImages = [
-    { src: art1, alt: 'Commissioned Art #1' },
-    { src: art2, alt: 'Blue Archive Fan Project' },
-    { src: art3, alt: 'Gift to my GF' },
-    { src: art4, alt: 'Commissioned Art #2' },
-    { src: art5, alt: 'Izayoi Nonomi' },
-    { src: art6, alt: 'A Very Angy Ayane' },
-    { src: art7, alt: 'Prince Ichika' },
-    { src: art8, alt: 'Sakurada Miyu' },
-    { src: art9, alt: 'Natsuki Mizuha' },
-    { src: art10, alt: 'What if we were actually teachers?' },
+  const [selectedImageIndex, setSelectedImageIndex] = useState(null);
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
+  const projects = [
+    { id: 1, title: 'Commissioned Art #1', image: art1 },
+    { id: 2, title: 'Blue Archive Fan Project', image: art2 },
+    { id: 3, title: 'gift to my beloved', image: art3 },
+    { id: 4, title: 'Commissioned Art #2', image: art4 },
+    { id: 5, title: 'Izayoi Nonomi', image: art5 },
+    { id: 6, title: 'A very angy Ayane', image: art6 },
+    { id: 7, title: 'Prince Ichika', image: art7 },
+    { id: 8, title: 'Miyu the angel', image: art8 },
+    { id: 9, title: 'Natsuki Mizuha', image: art9 },
+    { id: 10, title: 'What if we were teachers?', image: art10 },
   ];
 
- 
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState(null);
-
-
-  const openModal = (image) => {
-    setSelectedImage(image);
-    setIsModalOpen(true);
+  const openModal = (index) => {
+    setSelectedImageIndex(index);
+    setIsModalVisible(true);
   };
-
 
   const closeModal = () => {
-    setSelectedImage(null);
-    setIsModalOpen(false);
+    setIsModalVisible(false);
+    setTimeout(() => setSelectedImageIndex(null), 600); 
   };
 
+  const handleNextImage = () => {
+    setSelectedImageIndex((prevIndex) =>
+      prevIndex === projects.length - 1 ? 0 : prevIndex + 1
+    );
+  };
 
-  const handleOverlayClick = (e) => {
-    if (e.target.classList.contains('modal-overlay')) {
-      closeModal();
-    }
+  const handlePrevImage = () => {
+    setSelectedImageIndex((prevIndex) =>
+      prevIndex === 0 ? projects.length - 1 : prevIndex - 1
+    );
   };
 
   return (
     <section id="projects" className="projects-section">
-      <h2 className="section-title">Woosh! You are now in my art Gallery!</h2>
+      <h2 className="section-title">My Art Gallery!</h2>
       <div className="gallery">
-        {galleryImages.map((image, index) => (
+        {projects.map((project, index) => (
           <div
-            key={index}
+            key={project.id}
             className="gallery-item"
-            onClick={() => openModal(image)}
+            onClick={() => openModal(index)}
           >
-            <img src={image.src} alt={image.alt} className="gallery-image" />
+            <img
+              src={project.image}
+              alt={project.title}
+              className="gallery-image"
+            />
             <div className="overlay">
-              <p>{image.alt}</p>
+              <p>{project.title}</p>
             </div>
+            <div className="border-overlay"></div>
           </div>
         ))}
       </div>
 
-      {isModalOpen && (
-        <div className="modal-overlay" onClick={handleOverlayClick}>
-          <div className="modal-content">
+      {selectedImageIndex !== null && (
+        <div
+          className={`modal-overlay ${isModalVisible ? 'modal-transition' : ''}`}
+          onClick={closeModal}
+        >
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-nav-button modal-nav-left" onClick={handlePrevImage}>
+              ←
+            </button>
             <img
-              src={selectedImage.src}
-              alt={selectedImage.alt}
-              className="modal-image"
+              key={selectedImageIndex} 
+              src={projects[selectedImageIndex].image}
+              alt={projects[selectedImageIndex].title}
+              className={`modal-image ${isModalVisible ? 'fade-in' : ''}`}
             />
+            <button className="modal-nav-button modal-nav-right" onClick={handleNextImage}>
+              →
+            </button>
           </div>
         </div>
       )}

@@ -1,12 +1,12 @@
 import React from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Projects from './components/Projects';
+import Navbar from './components/Navbar.jsx';
+import Hero from './components/Hero.jsx';
+import Projects from './components/Projects.jsx';
 import './App.css';
 
 const App = () => {
   return (
-    <div>
+    <div className="app">
       <Navbar />
       <Hero />
       <Projects />
