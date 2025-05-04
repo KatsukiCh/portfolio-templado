@@ -12,13 +12,13 @@ const Hero = () => {
       <div className="hero-content">
         <div className="profile-picture-container">
           <img src={profileImage} alt="Profile" className="profile-picture" />
-          <div className="tooltip">This goofy looking goober needs commissions</div>
+          <div className="tooltip">face of an irregular</div>
         </div>
         <div className="text-content">
           <h1>My name is Rafael Templado!</h1>
-          <h2>Free-lance Artist who probably needs sleep</h2>
+          <h2>Free-lance Artist</h2>
           <p>
-          Welcome to my porfolio! What? You expect something more out of me?
+          Welcome to my porfolio!
           </p>
           <div className="social-links">
             <div className="social-icon-container">
