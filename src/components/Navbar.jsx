@@ -50,7 +50,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="container">
-        <div className="logo">INC na to...</div>
+        <div className="logo">I did my best!</div>
         <div className="nav-links">
           <a
             href={activeSection === 'hero' ? '#projects' : '#hero'}

@@ -18,7 +18,7 @@ html, body {
   top: 0;
   left: 0;
   width: 100%;
-  background: #ffffff;
+  background: #97b4da;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 50;
 }
@@ -45,7 +45,7 @@ html, body {
 }
 
 .nav-links a {
-  color: #666;
+  color: #050000;
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 500;
@@ -54,7 +54,7 @@ html, body {
 }
 
 .nav-links a:hover {
-  color: #007bff;
+  color: #ffffff;
 }
 
 .nav-text {
@@ -93,7 +93,7 @@ html, body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #ffffff;
+  color: #4df519;
   background-size: cover;
   background-position: center;
   width: 100vw;
@@ -107,7 +107,7 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+  background: linear-gradient(rgba(101, 248, 199, 0.438), rgba(0, 0, 0, 0.7));
 }
 
 .hero-content {
@@ -136,7 +136,7 @@ html, body {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  border: 4px solid #ffffff;
+  border: 4px solid #2bfc3c;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   display: block;
   transition: transform 0.3s ease;
@@ -272,14 +272,14 @@ html, body {
 
 .projects-section {
   padding: 4rem 1rem;
-  background: #f8f9fa;
+  background: #8ca5bea6;
   text-align: center;
 }
 
 .section-title {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #333;
+  color: #ffffff;
   margin-bottom: 2rem;
 }
 

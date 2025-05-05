@@ -18,26 +18,27 @@ const Hero = () => {
           <h1>My name is Rafael Templado!</h1>
           <h2>Free-lance Artist</h2>
           <p>
-          Welcome to my porfolio!
+          Welcome to my porfolio! While I am not an expert at coding or debugging, I am fairly good at  doing graphic designs! I also take commissions as a way to earn and further improve my skills!
+          Also github links are down there-               
           </p>
           <div className="social-links">
             <div className="social-icon-container">
               <a href="https://github.com/KatsukiCh" target="_blank" rel="noopener noreferrer">
                 <img src={githubIcon} alt="GitHub" className="social-icon" />
               </a>
-              <div className="social-tooltip">Le Github!</div>
+              <div className="social-tooltip">My Github Profile!</div>
             </div>
             <div className="social-icon-container">
-              <a href="https://www.wattpad.com/user/phynixfly_order" target="_blank" rel="noopener noreferrer">
-                <img src={wattpadIcon} alt="Wattpad" className="social-icon" />
+              <a href="https://github.com/powiepow/Todo" target="_blank" rel="noopener noreferrer">
+                <img src={githubIcon} alt="Wattpad" className="social-icon" />
               </a>
-              <div className="social-tooltip">I write fanfictions!</div>
+              <div className="social-tooltip">To do list Repository!</div>
             </div>
             <div className="social-icon-container">
-              <a href="https://www.youtube.com/@katsukithepaintbrush7673" target="_blank" rel="noopener noreferrer">
-                <img src={youtubeIcon} alt="YouTube" className="social-icon" />
+              <a href="https://github.com/powiepow/pokeapi" target="_blank" rel="noopener noreferrer">
+                <img src={githubIcon} alt="YouTube" className="social-icon" />
               </a>
-              <div className="social-tooltip">Check out my Channel!</div>
+              <div className="social-tooltip">Pokemon Simulator Repository!</div>
             </div>
           </div>
         </div>

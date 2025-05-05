@@ -51,7 +51,7 @@ const Projects = () => {
 
   return (
     <section id="projects" className="projects-section">
-      <h2 className="section-title">Just an Art Gallery.</h2>
+      <h2 className="section-title">Project section "(links were supposed to be here but couldn't work)".</h2>
       <div className="gallery">
         {projects.map((project, index) => (
           <div
